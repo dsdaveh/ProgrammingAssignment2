@@ -7,7 +7,7 @@
 ## cacheSolve - inverts a matrix x using caching
 ##
 ## to use:
-## test <- function(n) { 
+##   n=10
 ##   mnxn <- matrix(runif(n*n), nrow=n, ncol=n)  #or any other square matrix
 ##   x <- makeCacheMatrix()
 ##   x$set(mnxn)
@@ -15,8 +15,6 @@
 ##   cacheSolve(x)  #calcuates the value and caches it
 ##   imnxn <- cacheSolve(x)  #returns the cached value
 ##   round( mnxn %*% imnxn)  # shold be an identity matrix
-## }
-## test(10)
 
 ## create a set of functions to invert and cache a matrix
 makeCacheMatrix <- function(x = matrix()) {
